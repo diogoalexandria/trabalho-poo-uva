@@ -1,4 +1,3 @@
-
 public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
 	char tipo;
 	String tipoCasco;

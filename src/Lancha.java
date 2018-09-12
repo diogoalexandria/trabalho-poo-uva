@@ -1,4 +1,4 @@
-public class Lancha {
+public class Lancha extends VeiculosMaritmosTipoCasco {
 	boolean banheiro;
 	
 	public void setBanheiro(boolean banheiro) {
