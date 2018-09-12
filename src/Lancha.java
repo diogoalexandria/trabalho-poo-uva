@@ -8,4 +8,11 @@ public class Lancha extends VeiculosMaritmosTipoCasco {
 	public boolean getBanheiro() {
 		return banheiro;
 	}
+	
+	public Lancha() {
+	}
+	
+	public Lancha(boolean banheiro) {
+		this.banheiro = banheiro;
+	}
 }
