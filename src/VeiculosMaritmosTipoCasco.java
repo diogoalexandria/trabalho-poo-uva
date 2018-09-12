@@ -1,5 +1,5 @@
 
-public class VeiculosMaritmosTipoCasco {
+public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
 	char tipo;
 	String tipoCasco;
 	
@@ -17,6 +17,27 @@ public class VeiculosMaritmosTipoCasco {
 	
 	public String getTipoCasco() {
 		return tipoCasco;
+	}
+	
+	public VeiculosMaritmosTipoCasco() {
+	}
+	
+	public VeiculosMaritmosTipoCasco(char tipo) {
+		this.tipo = tipo;
+	}
+	
+	public VeiculosMaritmosTipoCasco(String tipoCasco) {
+		this.tipoCasco = tipoCasco;
+	}
+	
+	public VeiculosMaritmosTipoCasco(char tipo, String tipoCasco) {
+		this.tipo = tipo;
+		this.tipoCasco = tipoCasco;
+	}
+	
+	public VeiculosMaritmosTipoCasco(String tipoCasco, char tipo) {
+		this.tipoCasco = tipoCasco;
+		this.tipo = tipo;
 	}	
 }	
 	
