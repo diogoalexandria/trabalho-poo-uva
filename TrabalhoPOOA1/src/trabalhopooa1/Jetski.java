@@ -1,14 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package trabalhopooa1;
 
-/**
- *
- * @author Marcos
- */
-public class Jetski {
+public class Jetski extends VeiculosMaritmosTipoCasco{
+    boolean reboque;
     
+    //setters
+    public void setReboque(){
+        this.reboque = reboque;
+    }
+
+    //getters
+    public boolean getReboque(){
+        return reboque;
+    }
+    
+    //construtores
+    public Jetski() {
+    }
+
+    public Jetski(boolean reboque) {
+        this.reboque = reboque;
+    }
 }
+

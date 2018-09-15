@@ -5,7 +5,8 @@ package trabalhopooa1;
 public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
     char tipo;
     String tipoCasco;
-
+    
+    //setters
     public void setTipo(char tipo) {
             this.tipo = tipo;
     }
@@ -14,6 +15,7 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
             this.tipoCasco = tipoCasco;
     }
 
+    //getters
     public char getTipo() {
             return tipo;
     }
@@ -22,6 +24,7 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
             return tipoCasco;
     }
 
+    //contrutores
     public VeiculosMaritmosTipoCasco() {
     }
 
@@ -41,7 +44,14 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
     public VeiculosMaritmosTipoCasco(String tipoCasco, char tipo) {
             this.tipoCasco = tipoCasco;
             this.tipo = tipo;
-    }	
+    }
+    
+    //cadastrar
+    public void cadastrar(char tipo, String tipoCasco){
+        setTipo(tipo);
+        setTipoCasco(tipoCasco);
+    }
+    
 }	
 	
 	
