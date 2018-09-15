@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package trabalhopooa1;
 
-/**
- *
- * @author Marcos
- */
 public class Motor {
+    String marca, modelo, tipoCombustivel;
+    int potencia, rpmMax, rpm, numCilindros;
+    
+    
     
 }
