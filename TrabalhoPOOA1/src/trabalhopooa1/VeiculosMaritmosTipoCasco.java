@@ -1,8 +1,9 @@
 
 package trabalhopooa1;
-
+import java.util.Scanner;
 
 public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
+    Scanner t = new Scanner(System.in);
     char tipo;
     String tipoCasco;
     
@@ -52,6 +53,17 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
         setTipoCasco(tipoCasco);
     }
     
+    //imprimir
+    public void imprimir(){
+        super.imprimir();
+        System.out.println("Tipo: " + getTipo());
+        System.out.println("Tipo Casco: " + getTipoCasco());
+    }
+    
+    public void entradaDados(){
+        System.out.println("Digite o tipo: ");
+        tipo = t.nextLine().charAt(0);
+        System.out.println("Digite o tipo casco: ");
+        tipoCasco = t.nextLine();
+    }
 }	
-	
-	
