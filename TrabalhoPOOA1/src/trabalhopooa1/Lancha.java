@@ -19,11 +19,16 @@ public class Lancha extends VeiculosMaritmosTipoCasco {
     }
 
     public Lancha(boolean banheiro) {
-            this.banheiro = banheiro;
+        this.banheiro = banheiro;
     }
     
     //cadastrar
     
     
     //imprimir
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        System.out.println("Tem banheiro: " + getBanheiro());
+    }
 }
