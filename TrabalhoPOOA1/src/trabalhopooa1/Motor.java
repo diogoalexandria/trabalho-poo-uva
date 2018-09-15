@@ -56,6 +56,48 @@ public class Motor {
         return numCilindros;
     }
     
+    //Construtores
+    public Motor(){}
+    public Motor(String marca){
+        this.marca=marca;}
+    
+    public Motor(String marca, String modelo){
+        this.modelo=modelo;
+        this.marca=marca;}
+    
+    public Motor(String marca,String modelo,String tipoCombustivel){
+        this.marca=modelo;
+        this.modelo=modelo;
+        this.tipoCombustivel=tipoCombustivel;}
+    
+    public Motor(int potencia){
+        this.potencia=potencia;}
+    
+    public Motor(int potencia, int rpmMax){
+        this.potencia=potencia;
+        this.rpmMax=rpmMax;}
+    
+    public Motor(int potencia, int rpmMax, int rpm){
+        this.potencia=potencia;
+        this.rpmMax=rpmMax;
+        this.rpm=rpm;}
+    
+    public Motor(int potencia, int rpmMax, int rpm, int numCilindros){
+        this.potencia=potencia;
+        this.rpmMax=rpmMax;
+        this.rpm=rpm;
+        this.numCilindros=numCilindros;}
+    
+    public Motor(String marca,int potencia){
+        this.marca=marca;
+        this.potencia=potencia;}
+    
+    public Motor (String tipoCombustivel,int potencia, int rpmMax){
+        this.potencia=potencia;
+        this.rpmMax=rpmMax;
+        this.tipoCombustivel=tipoCombustivel;
+    }
+    
     void cadastrar(String marca,String modelo,String tipoCombustivel,
                     int potencia, int rpmMax, int rpm, int numCilindros){
         setMarca(marca);
@@ -101,4 +143,5 @@ public class Motor {
     void desacelerar(){
         System.out.println("Rpm do Motor apos desacelerar: "+(getRpm()-100));
     }
-}
+    
+}    
