@@ -21,5 +21,15 @@ public class Jetski extends VeiculosMaritmosTipoCasco{
     public Jetski(boolean reboque) {
         this.reboque = reboque;
     }
+    
+    @Override
+    public void entradaDados(){
+        super.entradaDados();
+    }
+    
+    @Override
+    public void imprimir(){
+        super.imprimir();
+    }
 }
 
