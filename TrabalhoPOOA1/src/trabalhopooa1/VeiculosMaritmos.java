@@ -1,7 +1,8 @@
 
 package trabalhopooa1;
-
-public class VeiculosMaritmos {
+import java.util.Scanner;
+public class VeiculosMaritmos { 
+    Scanner sc = new Scanner(System.in);
     String marca, modelo, identificacao;
     int numPassageiro, velocidadeMax;
     double preco;
@@ -57,6 +58,49 @@ public class VeiculosMaritmos {
         return motor1;
     }
     
+    public VeiculosMaritmos(){}
+
+    public VeiculosMaritmos(String marca) {
+        this.marca = marca;
+    }
+
+    public VeiculosMaritmos(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    public VeiculosMaritmos(String marca, String modelo, String identificacao) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.identificacao = identificacao;
+    }
+
+    public VeiculosMaritmos(int numPassageiro) {
+        this.numPassageiro = numPassageiro;
+    }
+
+    public VeiculosMaritmos(int numPassageiro, int velocidadeMax) {
+        this.numPassageiro = numPassageiro;
+        this.velocidadeMax = velocidadeMax;
+    }
+
+    public VeiculosMaritmos(double preco) {
+        this.preco = preco;
+    }
+
+    public VeiculosMaritmos(String marca, int numPassageiro) {
+        this.marca = marca;
+        this.numPassageiro = numPassageiro;
+    }
+
+    public VeiculosMaritmos(String marca, double preco) {
+        this.marca = marca;
+        this.preco = preco;
+    }
+    
+    public VeiculosMaritmos(Motor motor1){
+        this.motor1=motor1;
+    }
     
     void cadastrar(String marca,String modelo, String identificacao, 
                     int numPassageiro,int velocidadeMax, double preco,
@@ -71,10 +115,29 @@ public class VeiculosMaritmos {
     }
     
     void entradaDados(){
-        
+        System.out.println("Digite a marca: ");
+        marca=(sc.nextLine());
+        System.out.println("Digite o modelo: ");
+        modelo=(sc.nextLine());
+        System.out.println("Digite a identificacao: ");
+        identificacao=(sc.nextLine());
+        System.out.println("Digite a qtd de passagerios: ");
+        numPassageiro=(Integer.parseInt(sc.nextLine()));
+        System.out.println("Digite a velocidade max: ");
+        velocidadeMax=(Integer.parseInt(sc.nextLine()));
+        System.out.println("Digite o preco: ");
+        preco=(Integer.parseInt(sc.nextLine()));
+        motor1.entradaDados();
     }
     
     void imprimir(){
+        System.out.println("Marca: "+getMarca());
+        System.out.println("Modelo: "+getModelo());
+        System.out.println("Identificacao: "+getIdentificacao());
+        System.out.println("Qtd de passagerios: "+getNumPassageiro());
+        System.out.println("Velocidade max: "+getVelocidadeMax());
+        System.out.println("Preco: "+getPreco());
+        motor1.imprimir();
     }
     
     

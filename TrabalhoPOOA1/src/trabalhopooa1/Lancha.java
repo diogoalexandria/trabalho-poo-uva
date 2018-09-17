@@ -31,4 +31,9 @@ public class Lancha extends VeiculosMaritmosTipoCasco {
         super.imprimir();
         System.out.println("Tem banheiro: " + getBanheiro());
     }
+    
+    @Override
+    public void entradaDados(){
+        super.entradaDados();
+    }
 }

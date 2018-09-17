@@ -2,15 +2,13 @@ package trabalhopooa1;
 
 import java.util.Scanner;
 
-
-public class Iate extends VeiculosMaritimos{
+public class Iate extends VeiculosMaritmos{
+    Scanner sc = new Scanner(System.in);
     int numerotripulantes, numerocabines;
     boolean piscina;
-    Motor m2 = new motor2;
+    Motor m2 = new Motor();
 
-    //métodos setters
-    
-    
+    //métodos setters    
     public void setNumeroTripulantes(int numerotripulantes) {
             this.numerotripulantes = numerotripulantes;
     }
@@ -19,9 +17,14 @@ public class Iate extends VeiculosMaritimos{
         this.numerocabines = numerocabines;
     }
 
-    public boolean setPiscina(boolean piscina){
+    public void setPiscina(boolean piscina){
         this.piscina = piscina;
     }
+    
+    public void setM2(Motor m2){
+        this.m2 = m2;
+    }
+    
     
     // métodos getters
     
@@ -35,6 +38,10 @@ public class Iate extends VeiculosMaritimos{
     
     public boolean getPiscina(){
         return piscina;        
+    }
+    
+    public Motor getM2(){
+        return m2;
     }
 
     public Iate(){
@@ -84,28 +91,24 @@ public class Iate extends VeiculosMaritimos{
 
     // cadastrar
 
-    public void Cadastrar(String marca, String modelo, int numeropassageiros, int numerotripulantes, double preco, int velocidademax, String identificacao, int numerocabines, boolean piscina){
-    setMarca(marca);
-    setModelo(modelo);
-    setNumeroPassageiros(numeropassageiros);
-    setNumeroTripulantes(numerotripulantes);
-    setNumeroCabines(numerocabines);
-    setVelocidadeMaxima(velocidademax);
-    setIdentificacao(identificacao);
-    setPiscina(piscina);
+    public void Cadastrar(String marca, String modelo, int numeropassageiros, 
+                        int numerotripulantes, double preco, int velocidademax, 
+                        String identificacao, int numerocabines, boolean piscina){
+        super.cadastrar(marca, modelo, identificacao, numPassageiro, velocidademax, preco, motor1);
+        setNumeroTripulantes(numerotripulantes);
+        setNumeroCabines(numerocabines);
+        setPiscina(piscina);
+        setM2(m2);
     } 
     
     // imprimir 
     
+    @Override
     void imprimir(){
         String resposta;
-    
-        System.out.println("Marca:" + marca);
-        System.out.println("Modelo: " +modelo);
-        System.out.println("Numero Passageiros" +numeropassageiros);
+        super.imprimir();
         System.out.println("Numero Tripulantes" +numerotripulantes);
         System.out.println("Numero Cabines:" +numerocabines);
-        System.out.println("Velocidade Maxima" +velocidademax);
         System.out.println("identificacao"+identificacao);
         if ( piscina == true){
             resposta = "sim";
@@ -115,23 +118,14 @@ public class Iate extends VeiculosMaritimos{
         System.out.println("Piscina:" +resposta);
     }       
     //Entrada Dados
-    void EntradaDados(){
-        Scanner sc = new Scanner(System.in);
+    @Override
+    void entradaDados(){
         char condicao = 's';
-        System.out.println("Marca: ");
-        setMarca(sc.nextLine());
-        System.out.println("Modelo: ");
-        setModelo(sc.nextLine());
-        System.out.println("Numero Passageiros");
-        setNumeroPassageiros(sc.nextLine());
+        super.entradaDados();
         System.out.println("Numero Triupulantes: ");
         setNumeroTripulantes(Integer.parseInt(sc.nextLine()));
         System.out.println("Numero Cabines");
         setNumeroCabines(Integer.parseInt(sc.nextLine()));
-        System.out.println("Velocidade Maxima:");
-        setVelocidadeMaxima(Integer.parseInt(sc.nextLine()));
-        System.out.println("Identificação");
-        setIdentificacao(sc.nextLine());
         System.out.println("Piscina");
         condicao = (sc.next().charAt(0));
         if(condicao == 's'){
@@ -140,13 +134,13 @@ public class Iate extends VeiculosMaritimos{
             setPiscina(false);
         }   
     }
-    double ValorDesconto(){
+    double valorDesconto(){
         return preco*0.92;
         
     }
     
-    double PessoasPorCabine(){ 
-        return numeropassageiros/numerodecabines;
+    double pessoasPorCabine(){ 
+        return numPassageiro/numerocabines;
     }
           
 }

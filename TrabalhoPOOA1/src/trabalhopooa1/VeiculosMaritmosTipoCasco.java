@@ -54,12 +54,14 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
     }
     
     //imprimir
+    @Override
     public void imprimir(){
         super.imprimir();
         System.out.println("Tipo: " + getTipo());
         System.out.println("Tipo Casco: " + getTipoCasco());
     }
     
+    @Override
     public void entradaDados(){
         System.out.println("Digite o tipo: ");
         tipo = t.nextLine().charAt(0);
