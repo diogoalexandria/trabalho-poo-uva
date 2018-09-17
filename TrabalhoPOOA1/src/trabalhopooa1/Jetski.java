@@ -15,12 +15,45 @@ public class Jetski extends VeiculosMaritmosTipoCasco{
     }
     
     //construtores
+    public Jetski(String tipoCasco) {
+        super(tipoCasco);
+    }
+
+    public Jetski(char tipo, String tipoCasco) {
+        super(tipo, tipoCasco);
+    }
+
+    public Jetski(String tipoCasco, char tipo) {
+        super(tipoCasco, tipo);
+    }
+
     public Jetski() {
     }
 
     public Jetski(boolean reboque) {
         this.reboque = reboque;
     }
+
+    public Jetski(boolean reboque, char tipo) {
+        super(tipo);
+        this.reboque = reboque;
+    }
+
+    public Jetski(boolean reboque, String tipoCasco) {
+        super(tipoCasco);
+        this.reboque = reboque;
+    }
+
+    public Jetski(boolean reboque, char tipo, String tipoCasco) {
+        super(tipo, tipoCasco);
+        this.reboque = reboque;
+    }
+
+    public Jetski(char tipo) {
+        super(tipo);
+    }
+    
+    
     
     public void cadastrar(char tipo, String tipoCasco, boolean reboque){
         super.cadastrar(tipo, tipoCasco);
@@ -38,7 +71,7 @@ public class Jetski extends VeiculosMaritmosTipoCasco{
     }
     
     public double valorDesconto(){
-        
+        return  preco * 0.85;
     }
 }
 
