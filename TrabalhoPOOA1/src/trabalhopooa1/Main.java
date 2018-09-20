@@ -3,10 +3,10 @@ package trabalhopooa1;
 
 public class Main {
      public static void main(String[] args) {
-        Iate iate1 = new Iate();
+        /*Iate iate1 = new Iate();
         iate1.entradaDados();
         iate1.imprimir();
-        iate1.ValorDesconto();
+        double descontoIate = iate1.valorDesconto();
          
         Iate iate2 = new Iate("Marinha", "JKPOO");
         iate2.imprimir();
@@ -26,27 +26,27 @@ public class Main {
         Jetski jet1 = new Jetski();
         jet1.entradaDados();
         jet1.imprimir();
-        //jet1.ValorDesconto();
+        double desconto = jet1.valorDesconto();
         
-        Jetski jet2 = new Jetski();
+        Jetski jet2 = new Jetski("Casquinha");
         jet2.imprimir();
         
-        Jetski jet3 = new Jetski();
+        Jetski jet3 = new Jetski(false);
         jet3.imprimir();
         
-        Jetski jet4 = new Jetski();
+        Jetski jet4 = new Jetski('p');
         jet4.imprimir();
         
-        Jetski jet5 = new Jetski();
+        Jetski jet5 = new Jetski("Cascão", 'm');
         jet5.imprimir();
         
-        Jetski jet6 = new Jetski();
+        Jetski jet6 = new Jetski(true, 'g');
         jet6.imprimir();
         
         Lancha lancha1 = new Lancha();
         lancha1.entradaDados();
         lancha1.imprimir();
-        //lancha1.ValorDesconto();
+        double descontoLancha = lancha1.valorDesconto();
         
         Lancha lancha2 = new Lancha();
         lancha2.imprimir();
@@ -61,6 +61,12 @@ public class Main {
         lancha5.imprimir();
         
         Lancha lancha6 = new Lancha();
-        lancha6.imprimir();
+        lancha6.imprimir();*/
+        
+        VeiculosMaritmosTipoCasco teste = new VeiculosMaritmosTipoCasco();
+        teste.cadastrar('t', "teste");
+        String variavelteste = teste.getMarca();
+        System.out.println(variavelteste);
     }
+     
 }

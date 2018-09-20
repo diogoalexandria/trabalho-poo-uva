@@ -43,54 +43,63 @@ public class Iate extends VeiculosMaritmos{
     public Motor getM2(){
         return m2;
     }
-
-    public Iate(){
     
+    //construtores
+    public Iate(){    
     }
-
+    
     public Iate(String marca,String modelo){
     this.marca = marca;
     this.modelo = modelo;
     }
-
     public Iate(String marca, String modelo, double preco, String identificacao){ 
-
+        this.marca = marca;
+        this.modelo = modelo;
+        this.preco = preco;
+        this.identificacao = identificacao;
     }
-
 
     public Iate(String marca, String modelo, double preco, int numeropassageiros){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.preco = preco;
+        this.numPassageiro = numeropassageiros;
     }
-
     
     public Iate(String modelo, double preco, int numerocabines){ 
-
+        this.modelo = modelo;
+        this.preco = preco;
+        this.numerocabines = numerocabines;
     }
-
 
     public Iate(double preco, String identificacao, int numeropassageiros){ 
-
+        this.preco = preco;
+        this.identificacao = identificacao;
+        this.numPassageiro = numeropassageiros;
     }
 
-
     public Iate(String marca, double preco, String identificacao){ 
-
+        this.marca = marca;
+        this.preco = preco;
+        this.identificacao = identificacao;
     }
 
     public Iate(String identificacao, int numerocabines){ 
-
+        this.identificacao = identificacao;
+        this.numerocabines = numerocabines;
     }
     
     public Iate(double preco, int numerotripulantes){ 
-
+        this.preco = preco;
     }
-
     
     public Iate(String modelo, int velocidademax, int numerotripulantes){ 
-
+        this.modelo = modelo;
+        this.velocidadeMax = velocidademax;
+        this.numerotripulantes = numerotripulantes;
     }
 
-    // cadastrar
-
+    //cadastrar
     public void Cadastrar(String marca, String modelo, int numeropassageiros, 
                         int numerotripulantes, double preco, int velocidademax, 
                         String identificacao, int numerocabines, boolean piscina){
@@ -101,8 +110,7 @@ public class Iate extends VeiculosMaritmos{
         setM2(m2);
     } 
     
-    // imprimir 
-    
+    // imprimir    
     @Override
     void imprimir(){
         String resposta;
@@ -116,6 +124,7 @@ public class Iate extends VeiculosMaritmos{
             resposta = "não";
         }
         System.out.println("Piscina:" +resposta);
+        m2.imprimir();
     }       
     //Entrada Dados
     @Override
@@ -132,14 +141,14 @@ public class Iate extends VeiculosMaritmos{
             setPiscina(true);
         }else if(condicao == 'n'){
             setPiscina(false);
-        }   
+        }
+        m2.entradaDados();
     }
-    double ValorDesconto(){
-        return preco*0.92;
-        
+    double valorDesconto(){
+        return preco * 0.92;       
     }
     
-    double PessoasPorCabine(){ 
+    double pessoasPorCabine(){ 
         return numPassageiro/numerocabines;
     }
           

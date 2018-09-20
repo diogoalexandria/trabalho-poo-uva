@@ -58,6 +58,7 @@ public class VeiculosMaritmos {
         return motor1;
     }
     
+    //construtores
     public VeiculosMaritmos(){}
 
     public VeiculosMaritmos(String marca) {

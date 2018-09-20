@@ -137,11 +137,13 @@ public class Motor {
     }
     
     void acelerar(){
-        System.out.println("Rpm do Motor apos acelerar: " +(getRpm()+100));
+        rpm = getRpm()+ 100;
+        System.out.println("Rpm do Motor apos acelerar: " +(getRpm()));
     }
     
     void desacelerar(){
-        System.out.println("Rpm do Motor apos desacelerar: "+(getRpm()-100));
+        rpm = getRpm() - 100;
+        System.out.println("Rpm do Motor apos desacelerar: "+(getRpm()));
     }
     
 }    
