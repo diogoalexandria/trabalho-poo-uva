@@ -141,7 +141,8 @@ public class Iate extends VeiculosMaritmos{
             setPiscina(true);
         }else if(condicao == 'n'){
             setPiscina(false);
-        }   
+        }
+        m2.entradaDados();
     }
     double valorDesconto(){
         return preco * 0.92;       

@@ -55,8 +55,11 @@ public class Jetski extends VeiculosMaritmosTipoCasco{
     
     
     
-    public void cadastrar(char tipo, String tipoCasco, boolean reboque){
-        super.cadastrar(tipo, tipoCasco);
+    public void cadastrar(char tipo, String tipoCasco, String marca,String modelo, String identificacao, 
+                    int numPassageiro,int velocidadeMax, double preco,
+                    Motor motor1, boolean reboque){
+        super.cadastrar(tipo, tipoCasco, marca, modelo, identificacao, numPassageiro,
+                        velocidadeMax, preco, motor1);
         setReboque(reboque);
     }
     

@@ -46,9 +46,38 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
             this.tipoCasco = tipoCasco;
             this.tipo = tipo;
     }
+
+    public VeiculosMaritmosTipoCasco(String marca, String modelo) {
+        super(marca, modelo);
+    }
+
+    public VeiculosMaritmosTipoCasco(String marca, String modelo, String identificacao) {
+        super(marca, modelo, identificacao);
+    }
+
+    public VeiculosMaritmosTipoCasco(int numPassageiro) {
+        super(numPassageiro);
+    }
+
+    public VeiculosMaritmosTipoCasco(int numPassageiro, int velocidadeMax) {
+        super(numPassageiro, velocidadeMax);
+    }
+
+    public VeiculosMaritmosTipoCasco(double preco) {
+        super(preco);
+    }
+
+    public VeiculosMaritmosTipoCasco(String marca, int numPassageiro) {
+        super(marca, numPassageiro);
+    }
+    
+    
     
     //cadastrar
-    public void cadastrar(char tipo, String tipoCasco){
+    public void cadastrar(char tipo, String tipoCasco, String marca,String modelo, String identificacao, 
+                    int numPassageiro,int velocidadeMax, double preco,
+                    Motor motor1){
+        super.cadastrar(marca, modelo, identificacao, numPassageiro, velocidadeMax, preco, motor1);
         setTipo(tipo);
         setTipoCasco(tipoCasco);
     }
@@ -63,6 +92,7 @@ public class VeiculosMaritmosTipoCasco extends VeiculosMaritmos{
     
     @Override
     public void entradaDados(){
+        super.entradaDados();
         System.out.println("Digite o tipo: ");
         tipo = t.nextLine().charAt(0);
         System.out.println("Digite o tipo casco: ");
