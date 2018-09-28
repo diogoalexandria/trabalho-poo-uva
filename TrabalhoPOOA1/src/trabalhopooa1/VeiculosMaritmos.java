@@ -58,7 +58,10 @@ public class VeiculosMaritmos {
         return motor1;
     }
     
+<<<<<<< HEAD
     //construtores
+=======
+>>>>>>> c3798f50a6b2c8da70b30790b0129d29b80a461e
     public VeiculosMaritmos(){}
 
     public VeiculosMaritmos(String marca) {
