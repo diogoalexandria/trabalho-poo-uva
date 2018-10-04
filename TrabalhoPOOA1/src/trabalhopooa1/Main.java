@@ -2,8 +2,9 @@
 package trabalhopooa1;
 
 public class Main {
-     public static void main(String[] args) {        
+     public static void main(String[] args) {
         Iate iate1 = new Iate();
+
         iate1.entradaDados();
         iate1.imprimir();
         double descontoIate = iate1.valorDesconto();
@@ -48,6 +49,7 @@ public class Main {
         lancha1.imprimir();
         double descontoLancha = lancha1.valorDesconto();
         
+
         Lancha lancha2 = new Lancha(true);
         lancha2.imprimir();
         
@@ -64,6 +66,26 @@ public class Main {
         lancha6.imprimir();
         
         
+
+        Lancha lancha2 = new Lancha();
+        lancha2.imprimir();
+        
+        Lancha lancha3 = new Lancha();
+        lancha3.imprimir();
+        
+        Lancha lancha4 = new Lancha();
+        lancha4.imprimir();
+        
+        Lancha lancha5 = new Lancha();
+        lancha5.imprimir();
+        
+        Lancha lancha6 = new Lancha();
+        lancha6.imprimir();*/
+        
+        VeiculosMaritmosTipoCasco teste = new VeiculosMaritmosTipoCasco();
+        teste.cadastrar('t', "teste");
+        String variavelteste = teste.getMarca();
+        System.out.println(variavelteste);
     }
      
 }
